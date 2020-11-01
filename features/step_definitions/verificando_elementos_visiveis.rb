@@ -11,5 +11,5 @@ end
     page.assert_text(text, 'Você Clicou no Botão!')
     page.has_text?('Você Clicou no Botão!')
     have_text('Você Clicou no Botão!')
-
+    
 end

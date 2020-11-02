@@ -1,9 +1,11 @@
-require 'rspec'
-require 'yaml'
-require 'pry'
- require 'capybara/cucumber'
- require 'capybara/poltergeist'
+ require 'capybara'
+ require 'capybara/dsl'
+ require 'capybara/rspec/matchers'
  require 'selenium-webdriver'
+
+ #Deixando como global a automação 
+ World(Capybara::DSL)
+ World(Capybara::RSpecMatchers)
 
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
